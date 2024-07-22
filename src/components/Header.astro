@@ -1,0 +1,230 @@
+---
+import '../styles/global.css';
+---
+
+<header>
+    <div class="navbar">
+        <div class="logo">US.Art Plastics</div>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.375 12C21.375 12.2984 21.2565 12.5845 21.0455 12.7955C20.8345 13.0065 20.5484 13.125 20.25 13.125H3.75C3.45163 13.125 3.16548 13.0065 2.9545 12.7955C2.74353 12.5845 2.625 12.2984 2.625 12C2.625 11.7016 2.74353 11.4155 2.9545 11.2045C3.16548 10.9935 3.45163 10.875 3.75 10.875H20.25C20.5484 10.875 20.8345 10.9935 21.0455 11.2045C21.2565 11.4155 21.375 11.7016 21.375 12ZM3.75 7.125H20.25C20.5484 7.125 20.8345 7.00647 21.0455 6.7955C21.2565 6.58452 21.375 6.29837 21.375 6C21.375 5.70163 21.2565 5.41548 21.0455 5.2045C20.8345 4.99353 20.5484 4.875 20.25 4.875H3.75C3.45163 4.875 3.16548 4.99353 2.9545 5.2045C2.74353 5.41548 2.625 5.70163 2.625 6C2.625 6.29837 2.74353 6.58452 2.9545 6.7955C3.16548 7.00647 3.45163 7.125 3.75 7.125ZM20.25 16.875H3.75C3.45163 16.875 3.16548 16.9935 2.9545 17.2045C2.74353 17.4155 2.625 17.7016 2.625 18C2.625 18.2984 2.74353 18.5845 2.9545 18.7955C3.16548 19.0065 3.45163 19.125 3.75 19.125H20.25C20.5484 19.125 20.8345 19.0065 21.0455 18.7955C21.2565 18.5845 21.375 18.2984 21.375 18C21.375 17.7016 21.2565 17.4155 21.0455 17.2045C20.8345 16.9935 20.5484 16.875 20.25 16.875Z" fill="black"/>
+            </svg>
+        </div>
+        <nav class="nav-links" id="nav-links">
+            <a href="#">Shop <i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-content">
+                <a href="#">Item 1</a>
+                <a href="#">Item 2</a>
+                <a href="#">Item 3</a>
+            </div>
+            <a href="#">On Sale</a>
+            <a href="#">New Arrivals</a>
+            <a href="#">Brands</a>
+        </nav>
+        <div class="search-cart">
+            <div class="search-container">
+                <i class="w3-margin-right w3-large fa fa-search search-icon"></i>
+                <input type="text" placeholder="Search for products..." class="search-bar" id="search-bar">
+            </div>
+            <div class="icons">
+                <i class="w3-margin-right w3-large fa fa-shopping-cart cart-icon"></i>
+                <i class="w3-margin-right w3-large fa fa-user user-icon"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+<style>
+ @import url('https://www.w3schools.com/w3css/4/w3.css');
+ @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+ header {
+     background-color: var(--quaternary-color);
+     padding: 10px 20px;
+ }
+
+ .navbar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     flex-wrap: wrap;
+ }
+
+ .logo {
+     font-size: var(--font-size-stat);
+     font-weight: bold;
+     color: var(--secondary-color);
+ }
+
+ .nav-links {
+     display: flex;
+     gap: 15px;
+     margin-right: 20px;
+     position: relative;
+ }
+
+ .nav-links a {
+     text-decoration: none;
+     color: var(--primary-color);
+ }
+
+ .dropdown-content {
+     display: none;
+     position: absolute;
+     background-color: var(--quaternary-color);
+     min-width: 160px;
+     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+     z-index: 1;
+ }
+
+ .dropdown-content a {
+     color: var(--primary-color);
+     padding: 12px 16px;
+     text-decoration: none;
+     display: block;
+ }
+
+ .nav-links a:hover + .dropdown-content,
+ .dropdown-content:hover {
+     display: block;
+ }
+
+ .search-cart {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+ }
+
+ .search-container {
+     position: relative;
+     display: flex;
+     align-items: center;
+ }
+
+ .search-icon {
+     position: absolute;
+     left: 10px;
+     font-size: 16px;
+     color: var(--tertiary-color);
+     cursor: pointer;
+ }
+
+ .search-bar {
+     padding: 8px 8px 8px 30px;
+     border: 1px solid var(--tertiary-color);
+     border-radius: 20px;
+     transition: width 0.3s;
+ }
+
+
+
+ .icons {
+     display: flex;
+     gap: 10px;
+ }
+
+ .cart-icon,
+ .user-icon {
+     font-size: 20px;
+     cursor: pointer;
+ }
+
+ .icons i {
+     font-size: 24px;
+     color: var(--primary-color);
+ }
+
+ .hamburger-menu {
+     display: none;
+     cursor: pointer;
+ }
+
+ /* Media Queries for Responsiveness */
+ @media (max-width: 768px) {
+     .navbar {
+         flex-direction: column;
+         align-items: center;
+     }
+
+     .nav-links {
+         display: none;
+         flex-direction: column;
+         align-items: center;
+         margin-right: 0;
+         gap: 10px;
+         margin-top: 10px;
+     }
+
+     .nav-links.active {
+         display: flex;
+     }
+
+     .hamburger-menu {
+         display: block;
+     }
+
+     .search-cart {
+         flex-direction: column;
+         align-items: center;
+         gap: 10px;
+         margin-top: 10px;
+     }
+
+     .search-bar {
+         width: 100%;
+         max-width: 300px;
+     }
+
+     .search-bar:focus {
+         width: 100%;
+         max-width: 300px;
+     }
+
+     .icons {
+         flex-direction: row;
+         justify-content: center;
+         width: 100%;
+     }
+ }
+
+ @media (max-width: 480px) {
+     .logo {
+         font-size: 24px;
+     }
+
+     .search-bar {
+         padding: 8px 8px 8px 30px;
+         width: 100%;
+         max-width: 200px;
+     }
+
+     .search-bar:focus {
+         width: 100%;
+         max-width: 200px;
+     }
+
+     .icons i {
+         font-size: 20px;
+     }
+ }
+</style>
+
+<script>
+ document.getElementById('hamburger-menu').addEventListener('click', function () {
+     var navLinks = document.getElementById('nav-links');
+     if (navLinks.classList.contains('active')) {
+         navLinks.classList.remove('active');
+     } else {
+         navLinks.classList.add('active');
+     }
+ });
+
+ document.querySelector('.search-icon').addEventListener('click', function () {
+     var searchBar = document.getElementById('search-bar');
+     if (searchBar.classList.contains('active')) {
+         searchBar.classList.remove('active');
+     } else {
+         searchBar.classList.add('active');
+     }
+ });
+</script>

@@ -1,0 +1,16 @@
+/**/
+
+:root{
+    --primary-color: #003399;
+    --secondary-color: #FFC107;
+    --tertiary-color: #666666;
+    --quaternary-color: #ffffff;
+    --button-bg-color: #003399;
+    --button-bg-hover-color: #002080;
+    --star-color: #FFC107;
+    --font-family: 'Arial, sans-serif';
+    --font-size-large: 48px;
+    --font-size-medium: 18px;
+    --font-size-small: 16px;
+    --font-size-stat: 24px;
+}

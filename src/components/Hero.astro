@@ -1,0 +1,132 @@
+---
+import '../styles/global.css';
+---
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Elevate your Style <br/> with US Art Plastics</h1>
+        <p class="hero-subtitle">Explore Our Diverse Collection of Meticulously <br/> Crafted Garments, Tailored to Enhance Your Individuality and Style</p>
+        <button class="hero-button">Shop Now</button>
+        <div class="hero-stats">
+            <div class="stat">
+                <h3>200+</h3>
+                <p>International Bands</p>
+            </div>
+            <div class="stat">
+                <h3>2,000+</h3>
+                <p>High-Quality Products</p>
+            </div>
+            <div class="stat">
+                <h3>30,000</h3>
+                <p>Happy Custumers</p>
+            </div>
+        </div>
+    </div>
+    <div class="hero-decoration">
+	<div class="hero-bar"></div>
+    </div>
+    <!-- New Bar Section -->
+   
+</section>
+
+<style>
+ .hero {
+     text-align: left;
+     padding: 50px 20px;
+     background-color: var(--cuaternary-color);
+     position: relative;
+ }
+
+ .hero-content {
+     max-width: 800px;
+     margin: 0 auto;
+ }
+
+ .hero h1 {
+     font-family: 'Inter', sans-serif;
+     font-size: 48px;
+     font-weight: 700;
+     color: var(--primary-color);
+ }
+
+ .hero-subtitle {
+     padding-top: 100px;
+     font-size: 18px;
+     color: #666;
+     margin-bottom: 30px;
+ }
+
+ .hero-button {
+     background-color: var(--primary-color);
+     color: var(--quaternary-color);
+     border: none;
+     border-radius: 30px;
+     padding: 10px 50px;
+     font-size: var(--font-size-medium);
+     cursor: pointer;
+     transition: background-color 0.3s;
+ }
+
+ .hero-button:hover {
+     background-color: var(--button-bg-hover-color);
+ }
+
+ .hero-stats {
+     display: flex;
+     justify-content: left;
+     margin-top: 100px;
+     gap: 40px;
+     flex-wrap: wrap;
+ }
+
+ .stat {
+     text-align: center;
+ }
+
+ .stat h3 {
+     font-size: 24px;
+     font-weight: 700;
+     color: var(--primary-color);
+ }
+
+ .stat p {
+     color: var(--tertiary-color);
+
+ }
+
+ .hero-bar {
+     width: 100%;
+     height: 100px;
+     background: var(--primary-color);
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     z-index: 100%; /* Ensure it stays on top */
+ }
+
+ /* Responsive Styles */
+ @media (max-width: 768px) {
+     .hero h1 {
+         font-size: 36px;
+     }
+
+     .hero-subtitle {
+         font-size: var(--font-size-small);
+     }
+
+     .hero-button {
+         padding: 12px 24px;
+         font-size: var(--font-size-small);
+     }
+
+     .stat h3 {
+         font-size: 20px;
+     }
+
+     .hero-stats {
+         flex-direction: column;
+     }
+
+  
+ }
+</style>
