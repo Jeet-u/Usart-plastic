@@ -1,0 +1,33 @@
+---
+const { title, price, oldPrice } = Astro.props;
+---
+
+<div class="product-card">
+    <img src="placeholder.png" alt={title} class="product-image"/>
+    <h3>{title}</h3>
+    <p class="price">{price} {oldPrice && <span class="old-price">{oldPrice}</span>}</p>
+</div>
+
+<style>
+ .product-card {
+     background-color: var(--card-bg-color);
+     padding: 10px;
+     border-radius: 5px;
+     text-align: center;
+ }
+
+ .product-image {
+     width: 100%;
+     height: auto;
+ }
+
+ .price {
+     color: var(--primary-color);
+     font-weight: bold;
+ }
+
+ .old-price {
+     text-decoration: line-through;
+     color: var(--old-price-color);
+ }
+</style>

@@ -1,0 +1,37 @@
+---
+import ProductCard from '../components/ProductCard.astro';
+---
+
+<section class="new-arrivals">
+    <h2>NEW ARRIVALS</h2>
+    <div class="product-grid">
+        <ProductCard title="Venus of the Nile" price="$4,500.00" />
+        <ProductCard title="Acrylic Family" price="$999.00" oldPrice="$2,000.00" />
+        <ProductCard title="Crystal Coarse Lamp" price="$2,400.00" />
+        <ProductCard title="Venus of the Nile" price="$130" oldPrice="$160" />
+    </div>
+    <button class="view-all">View All</button>
+</section>
+
+<style>
+ .new-arrivals {
+     text-align: center;
+     padding: 20px;
+ }
+
+ .product-grid {
+     display: flex;
+     justify-content: center;
+     gap: 20px;
+ }
+
+ .view-all {
+     margin-top: 20px;
+     padding: 10px 20px;
+     background-color: var(--primary-color);
+     color: white;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+ }
+</style>
